@@ -10,7 +10,6 @@ import { ShowResumeComponent } from './show-resume/show-resume.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
 import { FormsModule } from '@angular/forms';
-import { DateInputComponent } from './shared/date-input/date-input.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,6 @@ import { DateInputComponent } from './shared/date-input/date-input.component';
     EducationComponent,
     ShowResumeComponent,
     ResumeBuilderComponent,
-    DateInputComponent,
   ],
   imports: [
     BrowserModule,

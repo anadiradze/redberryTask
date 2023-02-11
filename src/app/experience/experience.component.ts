@@ -8,7 +8,7 @@ import { ResumeBuilderService } from '../resume-builder-services/resume-builder.
 })
 export class ExperienceComponent {
   //inject service
-  constructor(private resumeBuilderService: ResumeBuilderService,) {}
+  constructor(private resumeBuilderService: ResumeBuilderService) {}
   //create formGroup and Formcontrols
   experienceForm = new FormGroup({
     position: new FormControl(''),
@@ -28,11 +28,4 @@ export class ExperienceComponent {
     console.log('button called');
   }
   //add experience many times
-
 }
-
-
-
-
-
-
