@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, FormsModule, Validators } from '@angular/forms';
 import { ResumeBuilderService } from '../resume-builder-services/resume-builder.service';
 
 @Component({
@@ -7,12 +7,9 @@ import { ResumeBuilderService } from '../resume-builder-services/resume-builder.
   templateUrl: './personal.component.html',
   styleUrls: ['./personal.component.css'],
 })
-
-
 export class PersonalComponent {
-  constructor(private resumeBuilderService: ResumeBuilderService) {
 
-  }
+  constructor(private resumeBuilderService: ResumeBuilderService) {}
 
   onSubmit() {
     // TODO: Use EventEmitter with form value
@@ -25,12 +22,11 @@ export class PersonalComponent {
     aboutMeTextArea: new FormControl(''),
     email: new FormControl(''),
     phoneNumber: new FormControl(''),
-
   });
 
-
   public callchangeDisplay() {
-    this.resumeBuilderService.changeDisplay('experience')
-    console.log("button called")
+    this.resumeBuilderService.changeDisplay('experience');
+    console.log('button called');
   }
+
 }

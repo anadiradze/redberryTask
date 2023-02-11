@@ -9,6 +9,8 @@ import { EducationComponent } from './education/education.component';
 import { ShowResumeComponent } from './show-resume/show-resume.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
+import { FormsModule } from '@angular/forms';
+import { DateInputComponent } from './shared/date-input/date-input.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +21,13 @@ import { ResumeBuilderComponent } from './resume-builder/resume-builder.componen
     EducationComponent,
     ShowResumeComponent,
     ResumeBuilderComponent,
+    DateInputComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

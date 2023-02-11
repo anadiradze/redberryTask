@@ -1,3 +1,20 @@
 <p>experience works!</p>
+
+<form [formGroup]="experienceForm" class="formGroupFlex">
+  <label for="position">პოზიცია </label>
+  <input id="position" type="text" formControlName="position" />
+  <p>მინიმუმ 2 სიმბოლო</p>
+
+  <label for="employer">დამსაქმებელი </label>
+  <input id="employer" type="text" formControlName="employer" />
+  <p>მინიმუმ 2 სიმბოლო</p>
+
+  <app-date-input></app-date-input>
+
+  <label for="description">აღწერა (არასავალდებულო) </label>
+  <textarea id="description" formControlName="description"></textarea>
+</form>
+<ng-template #container></ng-template>
+<button class="addexperienceButton">მეტი გამოცდილების დამატება</button>
 <button (click)="callchangeDisplayBack()">Show personal component</button>
 <button (click)="callchangeDisplayNext()">Show education component</button>
