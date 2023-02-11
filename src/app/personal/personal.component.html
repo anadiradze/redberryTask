@@ -1,21 +1,41 @@
 <div>
-<p>personal works!</p>
-<form [formGroup]="personalForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="personalForm" (ngSubmit)="onSubmit()" class="formGroupFlex">
+    <label for="firstName">სახელი </label>
+    <input id="firstName" type="text" formControlName="firstName" #firstName/>
+    <p> მინიმუმ 2 ასო, ქართული ასოები</p> 
 
-    <label for="firstName">First Name: </label>
-    <input id="firstName" type="text" formControlName="firstName">
-  
-    <label for="lastName">Last Name: </label>
-    <input id="lastName" type="text" formControlName="lastName">
-  
-    <label for="email">Last Name: </label>
-    <input id="email" type="text" formControlName="email">
 
-    <label for="phoneNumber">Last Name: </label>
-    <input id="phoneNumber" type="number" formControlName="phoneNumber">
+    <label for="lastName">გვარი </label>
+    <input id="lastName" type="text" formControlName="lastName" />
+    <p> მინიმუმ 2 ასო, ქართული ასოები</p> 
+
+    <label for="image">პირადი ფოტოს ატვირთვა </label>
+    <input id="image" type="file" formControlName="image" />
+
+    <label for="aboutMeTextArea">ჩემ შესახებ (არასავალდებულო) </label>
+    <textarea id="aboutMeTextArea" formControlName="aboutMeTextArea"></textarea>
+
+    <label for="email">ელ.ფოსტა </label>
+    <input id="email" type="text" formControlName="email" />
+    <p>უნდა მთავრდებოდეს @redberry.ge-ით</p>
+
+    <label for="phoneNumber"> მობილურის ნომერი: </label>
+    <input id="phoneNumber" type="number" formControlName="phoneNumber" />
+    <p>უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</p>
 
   </form>
 </div>
-<button ><a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">home</a></button>
-<button ><a routerLink="/experience" routerLinkActive="active" ariaCurrentWhenActive="page">experience</a></button>
+<button>
+  <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page"
+    >home</a
+  >
+</button>
+<button>
+  <a
+    routerLink="/experience"
+    routerLinkActive="active"
+    ariaCurrentWhenActive="page"
+    >experience</a
+  >
+</button>
 <app-show-resume></app-show-resume>
