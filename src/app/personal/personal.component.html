@@ -1,4 +1,21 @@
+<div>
 <p>personal works!</p>
+<form [formGroup]="personalForm" (ngSubmit)="onSubmit()">
+
+    <label for="firstName">First Name: </label>
+    <input id="firstName" type="text" formControlName="firstName">
+  
+    <label for="lastName">Last Name: </label>
+    <input id="lastName" type="text" formControlName="lastName">
+  
+    <label for="email">Last Name: </label>
+    <input id="email" type="text" formControlName="email">
+
+    <label for="phoneNumber">Last Name: </label>
+    <input id="phoneNumber" type="number" formControlName="phoneNumber">
+
+  </form>
+</div>
 <button ><a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">home</a></button>
 <button ><a routerLink="/experience" routerLinkActive="active" ariaCurrentWhenActive="page">experience</a></button>
 <app-show-resume></app-show-resume>
