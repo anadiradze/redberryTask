@@ -1,4 +1,4 @@
-import { Component, ComponentFactory, ComponentRef, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ResumeBuilderService } from '../resume-builder-services/resume-builder.service';
 @Component({
@@ -8,7 +8,7 @@ import { ResumeBuilderService } from '../resume-builder-services/resume-builder.
 })
 export class ExperienceComponent {
   //inject service
-  constructor(private resumeBuilderService: ResumeBuilderService, private componentFactory: ComponentFactory<ExperienceComponent>) {}
+  constructor(private resumeBuilderService: ResumeBuilderService,) {}
   //create formGroup and Formcontrols
   experienceForm = new FormGroup({
     position: new FormControl(''),
