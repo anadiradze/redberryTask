@@ -1,4 +1,3 @@
 <p>experience works!</p>
-<button ><a routerLink="/personal" routerLinkActive="active" ariaCurrentWhenActive="page">back to personal</a></button>
-<button ><a routerLink="/education" routerLinkActive="active" ariaCurrentWhenActive="page">education</a></button>
-<app-show-resume></app-show-resume>
+<button (click)="callchangeDisplayBack()">Show personal component</button>
+<button (click)="callchangeDisplayNext()">Show education component</button>

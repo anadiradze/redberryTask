@@ -1,0 +1,21 @@
+<div class="mainResumeBuilderContainer">
+<div class= "formContainer" [ngSwitch]="display">
+
+  <ng-container  *ngSwitchDefault>
+    <app-personal></app-personal>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'personal'">
+    <app-personal></app-personal>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'experience'">
+    <app-experience></app-experience>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'education'">
+    <app-education></app-education>
+  </ng-container>
+</div>
+<app-show-resume></app-show-resume>
+</div>

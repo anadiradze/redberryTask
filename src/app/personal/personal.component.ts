@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ResumeBuilderService } from '../resume-builder-services/resume-builder.service';
 
 @Component({
   selector: 'app-personal',
@@ -9,19 +10,27 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 
 export class PersonalComponent {
+  constructor(private resumeBuilderService: ResumeBuilderService) {
+
+  }
 
   onSubmit() {
     // TODO: Use EventEmitter with form value
     console.warn(this.personalForm.value);
   }
   personalForm = new FormGroup({
-    firstName: new FormControl('', Validators.required),
-    lastName: new FormControl('', Validators.required),
-    image: new FormControl('', Validators.required),
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+    image: new FormControl(''),
     aboutMeTextArea: new FormControl(''),
-    email: new FormControl('', Validators.required),
-    pShoneNumber: new FormControl('', Validators.required),
+    email: new FormControl(''),
+    phoneNumber: new FormControl(''),
 
   });
 
+
+  public callchangeDisplay() {
+    this.resumeBuilderService.changeDisplay('experience')
+    console.log("button called")
+  }
 }

@@ -1,13 +1,16 @@
 <div>
-  <form [formGroup]="personalForm" (ngSubmit)="onSubmit()" class="formGroupFlex">
+  <form
+    [formGroup]="personalForm"
+    (ngSubmit)="onSubmit()"
+    class="formGroupFlex"
+  >
     <label for="firstName">სახელი </label>
-    <input id="firstName" type="text" formControlName="firstName" #firstName/>
-    <p> მინიმუმ 2 ასო, ქართული ასოები</p> 
-
+    <input id="firstName" type="text" formControlName="firstName" #firstName />
+    <p>მინიმუმ 2 ასო, ქართული ასოები</p>
 
     <label for="lastName">გვარი </label>
     <input id="lastName" type="text" formControlName="lastName" />
-    <p> მინიმუმ 2 ასო, ქართული ასოები</p> 
+    <p>მინიმუმ 2 ასო, ქართული ასოები</p>
 
     <label for="image">პირადი ფოტოს ატვირთვა </label>
     <input id="image" type="file" formControlName="image" />
@@ -22,7 +25,6 @@
     <label for="phoneNumber"> მობილურის ნომერი: </label>
     <input id="phoneNumber" type="number" formControlName="phoneNumber" />
     <p>უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</p>
-
   </form>
 </div>
 <button>
@@ -30,12 +32,4 @@
     >home</a
   >
 </button>
-<button>
-  <a
-    routerLink="/experience"
-    routerLinkActive="active"
-    ariaCurrentWhenActive="page"
-    >experience</a
-  >
-</button>
-<app-show-resume></app-show-resume>
+<button (click)="callchangeDisplay()">Show experience component</button>

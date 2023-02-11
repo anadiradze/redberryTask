@@ -8,6 +8,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
 import { ShowResumeComponent } from './show-resume/show-resume.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ExperienceComponent,
     EducationComponent,
     ShowResumeComponent,
+    ResumeBuilderComponent,
   ],
   imports: [
     BrowserModule,

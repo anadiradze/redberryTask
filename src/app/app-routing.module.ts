@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { PersonalComponent } from './personal/personal.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { EducationComponent } from './education/education.component';
+import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -11,18 +12,9 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
   },
-
   {
-    path: 'personal',
-    component: PersonalComponent,
-  },
-  {
-    path: 'experience',
-    component: ExperienceComponent,
-  },
-  {
-    path: 'education',
-    component: EducationComponent,
+    path: 'resumeBuilder',
+    component: ResumeBuilderComponent,
   },
 ];
 
