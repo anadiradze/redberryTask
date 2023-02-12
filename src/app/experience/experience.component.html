@@ -1,29 +1,9 @@
-<p>experience works!</p>
 
-<form [formGroup]="experienceForm" class="formGroupFlex">
-  <label for="position">პოზიცია </label>
-  <input id="position" type="text" formControlName="position" />
-  <p>მინიმუმ 2 სიმბოლო</p>
-
-  <label for="employer">დამსაქმებელი </label>
-  <input id="employer" type="text" formControlName="employer" />
-  <p>მინიმუმ 2 სიმბოლო</p>
-
-  <div class="dateFlex">
-    <div class="eachDateFlex">
-      <label for="start_date">დაწყების რიცხვი </label>
-      <input id="start_date" type="date" formControlName="start_date" />
-    </div>
-    <div class="eachDateFlex">
-      <label for="end_date">დამთავრების რიცხვი </label>
-      <input id="end_date" type="date" formControlName="end_date" />
-    </div>
-  </div>
-
-  <label for="description">აღწერა (არასავალდებულო) </label>
-  <textarea id="description" formControlName="description"></textarea>
-</form>
 <ng-template #container></ng-template>
-<button class="addexperienceButton">მეტი გამოცდილების დამატება</button>
+<app-experience-child></app-experience-child>
+<app-experience-child *ngFor="let experience of experiences"></app-experience-child>
+<button class="addexperienceButton" (click)="addExperience()">მეტი გამოცდილების დამატება</button>
+
+
 <button (click)="callchangeDisplayBack()">Show personal component</button>
 <button (click)="callchangeDisplayNext()">Show education component</button>

@@ -1,7 +1,4 @@
-.formGroupFlex {
-  display: flex;
-  flex-direction: column;
-}
+
 .addexperienceButton {
   width: 289px;
   height: 48px;
@@ -9,15 +6,4 @@
   background: #62a1eb;
   border: none;
   color: #ffffff;
-}
-.dateFlex {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 56px;
-}
-.eachDateFlex {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
 }
