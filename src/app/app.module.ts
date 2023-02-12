@@ -10,6 +10,8 @@ import { ShowResumeComponent } from './show-resume/show-resume.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ResumeBuilderComponent } from './resume-builder/resume-builder.component';
 import { FormsModule } from '@angular/forms';
+import { EducationChildComponent } from './education/education-child/education-child.component';
+import { ExperienceChildComponent } from './experience/experience-child/experience-child.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { FormsModule } from '@angular/forms';
     EducationComponent,
     ShowResumeComponent,
     ResumeBuilderComponent,
+    EducationChildComponent,
+    ExperienceChildComponent
   ],
   imports: [
     BrowserModule,

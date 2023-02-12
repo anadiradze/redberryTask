@@ -1,2 +1,5 @@
 <p>education works!</p>
+<app-education-child></app-education-child>
+<app-education-child *ngFor="let education of educations"></app-education-child>
+<button class="addeducationButton" (click)="addEducation()">სხვა სასწავლებლის დამატება</button>
 <button (click)="callchangeDisplay()">Show experience component</button>

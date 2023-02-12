@@ -1,0 +1,20 @@
+<form [formGroup]="educationForm" class="formGroupFlex">
+  <label for="education">განათლება </label>
+  <input id="education" type="text" formControlName="education"placeholder="სასწავლებელი" />
+  <p>მინიმუმ 2 სიმბოლო</p>
+
+  <div class="dateFlex">
+    <label for="degree">ხარისხი</label>
+    <select name="degree" id="degree" placeholder=" აირჩიეთ ხარისხი">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+    </select>
+    <div class="eachDateFlex">
+      <label for="end_date">დამთავრების რიცხვი </label>
+      <input id="end_date" type="date" formControlName="end_date" />
+    </div>
+  </div>
+
+  <label for="description">აღწერა</label>
+  <textarea id="description" formControlName="description" placeholder="განათლების აღწერა"></textarea>
+</form>
